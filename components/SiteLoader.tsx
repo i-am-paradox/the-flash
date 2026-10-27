@@ -48,30 +48,6 @@ export default function SiteLoader({ progress, ready }: SiteLoaderProps) {
     };
   }, []);
 
-  // Exit: once the hero frames are ready, flash the charged bolt and wipe away.
-  useEffect(() => {
-    if (!ready) return;
-    const root = rootRef.current;
-    const tl = gsap.timeline();
-    tl.to(boltRef.current, {
-      scale: 1.18,
-      duration: 0.28,
-      ease: "power2.in",
-      transformOrigin: "50% 50%",
-      filter: "drop-shadow(0 0 26px rgba(255,224,102,0.9))",
-    })
-      .to(
-        contentRef.current,
-        { opacity: 0, scale: 1.08, duration: 0.4, ease: "power2.in" },
-        ">-0.06"
-      )
-      .to(root, { opacity: 0, duration: 0.5, ease: "power2.inOut" }, "<0.12")
-      .set(root, { display: "none", pointerEvents: "none" });
-    return () => {
-      tl.kill();
-    };
-  }, [ready]);
-
   const clamped = Math.min(1, Math.max(0, progress));
   const fillY = 140 * (1 - clamped);
   const fillH = 140 - fillY;
@@ -79,12 +55,14 @@ export default function SiteLoader({ progress, ready }: SiteLoaderProps) {
   return (
     <div
       ref={rootRef}
+      hidden={ready}
       aria-hidden={ready}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-7 overflow-hidden bg-[var(--bg-dark)]"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-7 overflow-hidden bg-[var(--bg-dark)] transition-opacity duration-500 ease-in-out"
+      style={{ opacity: ready ? 0 : 1, pointerEvents: ready ? "none" : "auto" }}
     >
       <div ref={contentRef} className="flex flex-col items-center gap-7">
         <span className="loader-reveal mono text-[0.62rem] uppercase tracking-[0.4em] text-[var(--muted-strong)]">
-          Kryntix Studio Presents
+          Paradox Studio Presents
         </span>
 
         <svg ref={boltRef} viewBox="0 0 100 140" className="h-28 w-auto" aria-hidden="true">
@@ -112,7 +90,7 @@ export default function SiteLoader({ progress, ready }: SiteLoaderProps) {
         </svg>
 
         <div className="loader-reveal flex items-baseline gap-1.5 leading-none">
-          <span className="display text-2xl tracking-[0.06em] text-[var(--white)]">KRYNTIX</span>
+          <span className="display text-2xl tracking-[0.06em] text-[var(--white)]">PARADOX</span>
           <span className="mono text-[0.7rem] uppercase tracking-[0.34em] text-[var(--muted-strong)]">
             Studio
           </span>

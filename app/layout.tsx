@@ -26,12 +26,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://flash-theta-ebon.vercel.app"),
-  title: "THE FLASH — KRYNTIX STUDIO",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://i-am-paradox.github.io/the-flash"),
+  title: "THE FLASH — PARADOX STUDIO",
   description:
-    "A cinematic scroll experience built around a reimagined Flash title reveal — by Kryntix Studio.",
+    "A cinematic scroll experience built around a reimagined Flash title reveal — by Paradox Studio.",
   openGraph: {
-    title: "THE FLASH — KRYNTIX STUDIO",
+    title: "THE FLASH — PARADOX STUDIO",
     description:
       "A cinematic scroll experience built around a reimagined Flash title reveal.",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "THE FLASH — KRYNTIX STUDIO",
+    title: "THE FLASH — PARADOX STUDIO",
     description:
       "A cinematic scroll experience built around a reimagined Flash title reveal.",
     images: ["/og-image.png"],

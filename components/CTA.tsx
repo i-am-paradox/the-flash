@@ -121,7 +121,7 @@ export default function CTA() {
 
       <div ref={headingWrapRef} className="relative flex max-w-3xl flex-col items-center gap-6">
         <ScrambleReveal as="span" className="section-kicker">
-          KRYNTIX STUDIO — ABOUT THIS SITE
+          PARADOX STUDIO — ABOUT THIS SITE
         </ScrambleReveal>
         <MixedHeadline
           as="h2"
@@ -141,9 +141,7 @@ export default function CTA() {
           start="top 82%"
           className="body-muted max-w-xl text-[1.05rem]"
         >
-          Kryntix Studio is a small crew building tribute sites for the heroes we grew up
-          watching. This one&apos;s for The Flash — no leaks, no spoilers, no plot claims.
-          Just craft, motion, and a whole lot of love for the Scarlet Speedster.
+          Paradox Studio is an open-source creative lab building tribute experiences for the characters and stories that inspire us. This one&apos;s for The Flash — no leaks, no spoilers, no plot claims. Just craft, motion, and a whole lot of love for the Scarlet Speedster.
         </RevealText>
       </div>
 
@@ -165,7 +163,7 @@ export default function CTA() {
 
       <div className="reveal-up relative flex flex-col items-center gap-4 sm:flex-row">
         <a
-          href="https://kryntixstudio.vercel.app"
+          href="https://github.com/i-am-paradox"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-shimmer secondary relative overflow-hidden rounded-full px-8 py-3.5 text-sm tracking-[0.08em] text-black transition-transform hover:scale-[1.03]"
@@ -174,15 +172,15 @@ export default function CTA() {
             boxShadow: "0 20px 40px -18px rgba(225,29,46,0.55)",
           }}
         >
-          SEE THE FULL STUDIO
+          EXPLORE ON GITHUB
         </a>
         <a
-          href="https://instagram.com/kryntixstudio"
+          href="https://github.com/i-am-paradox/the-flash"
           target="_blank"
           rel="noopener noreferrer"
           className="mono card-surface glow-border rounded-full px-8 py-3.5 text-sm tracking-[0.08em] text-[var(--white)] transition-transform hover:scale-[1.03]"
         >
-          @kryntixstudio ON INSTAGRAM
+          STAR REPOSITORY
         </a>
       </div>
 

@@ -1,7 +1,14 @@
 {
   "name": "the-flash",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Cinematic scroll-scrubbed interactive experience for The Flash — built with Next.js, GSAP, and Lenis by Paradox Studio.",
+  "license": "MIT",
+  "author": "Paradox <me.paradox101@gmail.com> (https://github.com/i-am-paradox)",
+  "homepage": "https://github.com/i-am-paradox/the-flash",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i-am-paradox/the-flash.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

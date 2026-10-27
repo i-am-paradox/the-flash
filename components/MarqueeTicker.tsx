@@ -7,7 +7,7 @@
 const ITEMS = [
   "THE FLASH",
   "FASTER THAN THE MOMENT",
-  "KRYNTIX STUDIO",
+  "PARADOX STUDIO",
   "SCARLET SPEEDSTER",
 ] as const;
 
